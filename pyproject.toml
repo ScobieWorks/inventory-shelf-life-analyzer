@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inventory-shelf-life-analyzer"
+version = "0.1.0"
+description = "CLI tool that reads a CSV of perishable items, parses expiry dates, calculates days until expiry relative to a reference date, buckets items into expired, <30, 30\u201190, >90 days, and outputs a table and optional JSON report."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+
+[project.scripts]
+"inventory-shelf-life-analyzer" = "inventory_shelf_life_analyzer:main"
+
+[project.urls]
+Repository = "https://github.com/ScobieWorks/inventory-shelf-life-analyzer"
+
+[tool.setuptools]
+py-modules = ["inventory_shelf_life_analyzer"]
